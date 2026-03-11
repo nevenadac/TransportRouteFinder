@@ -1,0 +1,6 @@
+----------RECEIPTS----------
+Relation: A_0_0->G_1_3
+Total time: 384min
+Total price: 2410KM
+Date and Time: 17.06.2025 13:00:35
+____________________________

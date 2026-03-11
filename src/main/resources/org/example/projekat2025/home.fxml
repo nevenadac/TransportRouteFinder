@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.projekat2025.controller.HomeController"
+            prefHeight="700.0" prefWidth="1000.0"
+            fitToHeight="true" fitToWidth="true">
+
+
+<AnchorPane fx:id="rootAnchor" prefHeight="700.0" prefWidth="1000.0">
+
+    <VBox spacing="10" alignment="TOP_LEFT"
+          AnchorPane.topAnchor="10"
+          AnchorPane.bottomAnchor="10"
+          AnchorPane.leftAnchor="10"
+          AnchorPane.rightAnchor="220">
+        <Label fx:id="lblTotalTickets"
+                text="Total number of tickets sold: "
+               style="-fx-font-size: 18px;"
+               maxWidth="Infinity"
+               alignment="TOP_LEFT" />
+
+        <Label fx:id="lblTotalIncome"
+                text="Total income: "
+               style="-fx-font-size: 18px;"
+               maxWidth="Infinity"
+               alignment="TOP_LEFT" />
+
+        <GridPane fx:id="mapGrid" hgap="5" vgap="5"
+                  maxWidth="Infinity"
+                  maxHeight="Infinity"
+                  VBox.vgrow="ALWAYS" />
+    </VBox>
+
+    <VBox fx:id="rightVBox" spacing="15" alignment="TOP_CENTER"
+          maxWidth="200" prefWidth="200"
+          AnchorPane.topAnchor="10"
+          AnchorPane.bottomAnchor="10"
+          AnchorPane.rightAnchor="10"
+          style="-fx-padding: 10; -fx-border-color: black;">
+
+
+        <RadioButton fx:id="criterionTime" text="SHORTEST TIME" wrapText="true" />
+        <RadioButton fx:id="criterionPrice" text="LOWEST PRICE" />
+        <RadioButton fx:id="criterionTransfer" text="LEAST TRANFERS" wrapText="true" />
+
+        <Button fx:id="generateButton" text="FIND OPTIMAL ROUTE" onAction="#onGenerateButton" wrapText="true" />
+
+        <Button fx:id="doneButton" text="DONE" onAction="#onDoneClicked"/>
+    </VBox>
+
+</AnchorPane>
+</ScrollPane>
